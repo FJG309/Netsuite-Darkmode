@@ -1,0 +1,192 @@
+/* ==UserStyle==
+@name         Netsuite Dark
+@description  A Dark theme for Netsuite
+@author       FJG309
+@namespace    https://github.com/FJG309
+@homepageURL  https://github.com/FJG309/Netsuite-Darkmode
+@version      1.0
+@license      GPLv3
+==/UserStyle== */
+@-moz-document domain("app.netsuite.com")
+{
+  :root {
+    --background-color: #000000;
+    --white-background-color: #fafafa;
+    --secondary-background-color: #5e5e5e;
+    --text-color: #e0e0e0;
+    --secondary-text-color: #575555;
+    --link-color: #3c3e40;
+    --link-hover-color: #505050;
+    --border-color: #dfdddd;
+    --scrollbar-thumb-color: #555555;
+    --scrollbar-track-color: #1a1a1a;
+    --scrollbar-width: 12px;
+    --highlight-color: #3d5afe;
+    --inactive-tab-color: #676767;
+    --table-border-color: #e3dede;
+    --help-background-color: #f7f7f7;
+  }
+
+  ::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+  }
+
+  * {
+    color: var(--secondary-text-color) !important;
+  }
+
+  html,
+  body,
+  #body {
+    background-color: var(--white-background-color) !important;
+  }
+
+  body[class],
+  body[data-page-theme] {
+    filter: invert(100%) hue-rotate(180deg) !important;
+  }
+
+  body svg {
+    fill: var(--secondary-text-color) !important;
+  }
+
+  /*** Link color ***/
+  a,
+  .uir-hoverable-anchor,
+  .dottedlink {
+    color: var(--link-color) !important;
+  }
+
+  .uir-hoverable-anchor:hover,
+  .dottedlink:hover {
+    color: var(--link-hover-color) !important;
+    text-decoration: underline !important;
+  }
+
+  .smallgraytextnolink:hover {
+    text-decoration: none !important;
+  }
+
+  /*** Navbar Background **/
+  .uif25 *,
+  .uif640 *,
+  .uif26.uif14 .uif25,
+  .uif641.uif629 .uif640 {
+    background-color: var(--table-border-color) !important;
+    fill: var(--secondary-text-color) !important;
+  }
+
+  .uif25 a:hover,
+  .uif640 a:hover {
+    background-color: var(--background-color) !important;
+  }
+
+  /*** Search border ***/
+  #uif41,
+  #uif43 {
+    border: 1px solid var(--border-color) !important;
+  }
+
+  .bgtabbar,
+  .uif1055 {
+    background: var(--table-border-color) !important;
+    color: var(--text-color) !important;
+  }
+
+  .uir-unroll-tabs-button a {
+    filter: invert(1);
+  }
+
+  .formtabtextoff {
+    color: var(--inactive-tab-color) !important;
+  }
+
+  .formtabtextoff:hover {
+    text-decoration: underline;
+  }
+
+  .formsubtabtexton {
+    color: var(--highlight-color) !important;
+  }
+
+  /*** Transactions Totals ***/
+  table.totallingtable caption,
+  .uir-machine-tooltip-body,
+  .uir-machine-tooltip-chevron {
+    background-color: var(--table-border-color);
+  }
+
+  /*** Field Help Background ***/
+  div[style*="position: fixed; top: 0px; left: 0px; width: 100vw;"] {
+    background-color: var(--help-background-color) !important;
+    opacity: 0.8;
+  }
+
+  /*** Label PDF/HTML Editor ***/
+  .primary-color-back,
+  .dropdownDiv .dropdownSelected {
+    background-color: var(--table-border-color) !important;
+  }
+
+  /*** Help Center ***/
+  #ns_navigation,
+  #ns_navigation .ns-menuitem.ns-header > a {
+    background-color: var(--table-border-color) !important;
+    font-weight: 600 !important;
+  }
+
+  .uir-nav-tree-wrapper #div__maincontent/*,
+    .uir-nav-search*/ {
+    border: 1px solid var(--border-color) !important;
+    background-color: var(--secondary-background-color) !important;
+  }
+
+  .uir-tree-node-parent-focused {
+    background-color: var(--secondary-background-color) !important;
+    opacity: 0.6;
+  }
+
+  #nshelp_search_results .result-document:nth-child(2n + 1) {
+    background-color: var(--help-background-color) !important;
+  }
+
+  #nshelp_search_results a:hover,
+  .uir-tree-node:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+  }
+
+  #nshelp table.grid td,
+  #nshelp table.grid_shaded td,
+  #nshelp table.grid th,
+  #nshelp table.grid_shaded th {
+    border-color: var(--table-border-color) !important;
+  }
+
+  /*** Hide unnecessary elements ***/
+  .ogl-rw-convergence-launcher,
+  .ou-convergence-launcher {
+    display: none !important;
+  }
+
+  /*** NS Utils ***/
+  #record-object-container {
+    background-color: var(--white-background-color) !important;
+  }
+  .nsutil-search-criteria {
+    background-color: var(--border-color) !important;
+  }
+
+  .nsutils-record-object-header {
+    background-color: var(--table-border-color) !important;
+  }
+}
