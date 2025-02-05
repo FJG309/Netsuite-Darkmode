@@ -8,7 +8,7 @@ A dark theme for NetSuite to reduce eye strain.
 ## Compatibility
 This theme has been tested on:
 - **Firefox** (latest stable version)
-- **Chrome** (latest stable version)
+- **Chrome** (132.0.6834.110)
 
 ## Screenshots
 
